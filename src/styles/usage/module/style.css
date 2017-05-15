@@ -1,0 +1,785 @@
+::-moz-placeholder {
+  color: #c3c3c3;
+}
+::-webkit-input-placeholder {
+  color: #c3c3c3;
+}
+:-ms-input-placeholder {
+  color: #c3c3c3;
+}
+
+.grayBG{
+  background: #eaeaea;
+}
+
+/*common*/
+.rs-alertLayout {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: #6d6d6d;
+  opacity: .8;
+  z-index: 999;
+}
+.rs-alert {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding: 0.1rem;
+  width: 70%;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  z-index: 1100;
+  font-size: 0.26rem;
+}
+
+.hide{
+  display: none !important;
+}
+
+/*********************xd-login.html***/
+.loginBanner{
+  width: 100%;
+}
+.loginBanner img{
+  display: block;
+  width: 100%;
+}
+.loginForm{
+  background: #fff;
+  width: 91%;
+  height: 1.6rem;
+  border-bottom: 2px solid #dcdcdc;
+  padding: 0 4.5%;
+}
+.loginForm label{
+  width: 100%;
+  display: block;
+  height: 0.79rem;
+  color: #2f2f2f;
+  line-height: 0.8rem;
+  border-bottom: 2px solid #dcdcdc;
+  font-size: 0.26rem;
+}
+.loginForm label i{
+  display: inline-block;
+  height: 0.8rem;
+  font-size: 0.36rem;
+  margin-top: 0.05rem;
+}
+.loginForm input{
+  width: 76%;
+  float: right;
+  border:0;
+  background: none;
+  line-height: 0.8rem;
+}
+.loginForm label:last-child{
+  border: 0;
+}
+.loginBtn{
+  display: block;
+  border: 0;
+  background: #169fff;
+  width: 84%;
+  height: 0.85rem;
+  margin: 0.89rem auto 0.3rem;
+  border-radius: 0.06rem;
+  color: #fff;
+  font-size: 0.3rem;
+  text-align: center;
+  line-height: 0.85rem;
+}
+.loginAct{
+  width: 84%;
+  margin: 0 auto;
+}
+.loginAct span a{
+  color: #169fff;
+  font-size: 0.24rem;
+}
+.loginAct span:first-child{
+  float: left;
+}
+.loginAct span:last-child{
+  float: right;
+}
+
+
+/******************************xd-activate.html**/
+.activateForm{
+  background: #fff;
+  width: 91%;
+  border-bottom: 2px solid #dcdcdc;
+  padding: 0 4.5%;
+  height: 2.41rem;
+}
+.activateForm label{
+  width: 100%;
+  display: block;
+  height: 0.79rem;
+  color: #2f2f2f;
+  line-height: 0.8rem;
+  border-bottom: 2px solid #dcdcdc;
+  font-size: 0.26rem;
+}
+.activateForm input{
+  width: 76%;
+  border:0;
+  background: none;
+  line-height: 0.8rem;
+  float: right;
+}
+.activateForm label:last-child{
+  border: 0;
+}
+.activateForm label:last-child input:first-child{
+  /*width: 48%;*/
+  width: 41.5%;
+  height:0.55rem;
+  line-height:0.5rem;
+  float: none;
+  margin: 0.1rem 0 0.12rem 0.32rem;
+  border-radius: 0;
+  border-right: 2px solid #dcdcdc;
+}
+.activateForm label:last-child input:last-child{
+  /*width: 25%;*/
+  width: 34%;
+  text-align: center;
+  color: #169fff;
+}
+.activateFormPwd{
+  margin-top: 0.29rem;
+  border-top: 2px solid #dcdcdc;
+}
+.activateFormPwd input{
+  width: 73%;
+}
+
+
+/******************************xd-noContract.html**/
+.logoutBanner{
+  width: 90%;
+  height: 1.01rem;
+  background: url(../images/logoutBanner.png) no-repeat;
+  background-size: cover;
+  padding: 0.52rem 5%;
+}
+.logoutBanner h1{
+  float: left;
+  width: 0.92rem;
+  height: 0.92rem;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+.logoutBanner h1 img{
+  width: 100%;
+  border-radius: 50%;
+}
+.logoutBanner .logoutUserInfo{
+  display: inline-block;
+}
+.logoutBanner .logoutUserInfo p{
+  line-height: 0.4rem;
+  font-size: 0.26rem;
+  /*float: left;*/
+  margin: 0.1rem 0 0 0.15rem;
+}
+.logoutBanner .logout{
+  margin-top: 0.5rem;
+  height: 0.74rem;
+  float: right;
+  background: url(../images/logout.png) no-repeat center top;
+  background-size: 0.36rem 0.4rem;
+  line-height: 1.3rem;
+  font-size: 0.24rem;
+}
+.logoutContract{
+  margin: 1.46rem auto 0.6rem;
+}
+.logoutContract img{
+  display: block;
+  width: 1.46rem;
+  height: 1.83rem;
+  margin: 0 auto;
+}
+.logoutText{
+  color: #444;
+  font-size: 0.26rem;
+  text-align: center;
+  line-height: 0.42rem;
+}
+
+
+/**********************************xd-index.html*****/
+.indexBanner .logout{
+  background: url(../images/indexLogout.png) no-repeat right top;
+  background-size: 0.41rem 0.39rem;
+  margin-top: 0.15rem;
+}
+.indexOverdue,
+.indexRepay,
+.indexSettle
+{
+  background: #fff;
+  height: 1.36rem;
+  margin: 0.16rem 0;
+  padding: 0.25rem 0.33rem 0.25rem 0.28rem;
+}
+.indexOverdue p,
+.indexRepay p,
+.indexSettle p
+{
+  background: #169fff;
+  width: 1.24rem;
+  height: 0.34rem;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 0.34rem;
+  font-size: 0.24rem;
+}
+.indexOverdue span,
+.indexRepay span,
+.indexSettle span
+{
+  width: 79%;
+  display: inline-block;
+  color: #808080;
+  font-size: 0.25rem;
+  margin: 0.12rem 0 0 0.05rem;
+  line-height: 0.4rem;
+}
+.indexOverdue span em,
+.indexRepay span em,
+.indexSettle span em,
+.indexOverdue span b,
+.indexRepay span b,
+.indexSettle span b
+{
+  color: #444444;
+}
+.indexOverdue input,
+.indexRepay input,
+.indexSettle input
+{
+  float: right;
+  width: 1.1rem;
+  height: 0.44rem;
+  border: 2px solid #169fff;
+  border-radius: 5px;
+  color: #169fff;
+  font-size: 0.24rem;
+}
+.indexViewDetail{
+  width: 30%;
+  margin: 0.62rem auto 0.3rem;
+  font-size: 0.26rem;
+  color: #169fff;
+}
+.indexViewDetail span{
+  float: right;
+  margin-top: 0.08rem;
+  width: 0.24rem;
+  height: 0.21rem;
+  background: url(../images/arrow.png) no-repeat right bottom;
+  background-size: 0.24rem;
+}
+.indexDetail{
+  border-radius: 5px;
+  width: 95%;
+  background: #f8f8f8;
+  margin: 0 auto;
+  margin-bottom: 0.45rem;
+}
+.indexDetail .indexDetailList{
+  background: #fff;
+  border: 2px solid #169fff;
+  border-radius: 5px;
+  color: #169fff;
+  font-size: 0.26rem;
+  height: 0.66rem;
+}
+.indexDetailList h3{
+  float: left;
+  width: 50%;
+  height: 0.66rem;
+  text-align: center;
+  line-height: 0.66rem;
+}
+.indexDetailList h3.active{
+  color: #fff;
+  background: #169fff;
+}
+.indexDetail table{
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+}
+.indexDetail table tr th{
+  color: #414141;
+  font-weight: normal;
+  font-size: 0.26rem;
+  height: 0.68rem;
+  line-height: 0.68rem;
+}
+.indexDetail ul li{
+  height: 0.68rem;
+  line-height: 0.68rem;
+  font-size: 0.26rem;
+  color: #808080;
+  text-align: center;
+}
+.indexDetail ul li:last-child{
+  border-radius: 5px;
+}
+.indexDetail ul li span{
+  display: inline-block;
+  float: left;
+}
+.indexDetail ul li:nth-child(odd){
+  background: #fff;
+}
+.indexDetail ul li span:nth-child(1){
+  width: 20%;
+}
+.indexDetail ul li span:nth-child(2){
+  width: 35%;
+}
+.indexDetail ul li span:nth-child(3){
+  width: 35%;
+}
+.indexDetail ul li span:nth-child(4){
+  width: 10%;
+  height: 0.68rem;
+  text-align: left;
+  background: url(../images/arrow02.png) no-repeat 30% center;
+  background-size: 0.22rem;
+}
+.indexDetail ul li .detail{
+  background: #fff;
+  height: 0.68rem;
+}
+.indexDetail ul .detail span{
+  display: inline-block;
+  line-height: 0.68rem;
+  font-size: 0.26rem;
+  color: #808080;
+}
+.indexDetail ul .detail span:nth-child(1){
+  width: 42%;
+  text-align: left;
+  padding-left:8%;
+}
+.indexDetail ul .detail span:nth-child(2){
+  width: 42%;
+  text-align: left;
+  padding-left:8%;
+}
+.indexDetail ul .detail span:nth-child(3){
+  width: 92%;
+  text-align: left;
+  padding-left:8%;
+}
+
+/************************xd-earlySettlement.html*/
+.earlySetInfo{
+  margin: 0.28rem 0;
+  background: url(../images/settlementBorder.png) no-repeat center top;
+  background-size: 100%;
+  color: #2f2f2f;
+}
+.earlySetInfo h3,
+.earlySetAccount h3
+{
+  height: 0.8rem;
+  line-height: 0.8rem;
+  padding: 0 5%;
+  font-size: 0.29rem;
+}
+.earlySetInfo p{
+  height: 0.8rem;
+  line-height: 0.8rem;
+  padding: 0 5%;
+  background: #fff;
+  font-size: 0.27rem;
+}
+.earlySetInfo p span{
+  padding-left: 5%;
+}
+.earlySetAccount{
+  background: url(../images/settlementBorder.png) no-repeat center top;
+  background-size: 100%;
+  color: #2f2f2f;
+  margin-top: 0.35rem;
+}
+.earlySetAccount ul{
+  background: #fff;
+  padding: 0 5%;
+}
+.earlySetAccount ul li{
+  height: 0.78rem;
+  line-height: 0.78rem;
+  border-bottom: 0.03rem solid #dcdcdc;
+  font-size: 0.27rem;
+}
+.earlySetAccount ul li:last-child{
+  border: 0;
+}
+.earlySetAccount ul li p span{
+  padding-left: 5%;
+}
+.earlySetAccount ul li.noPadding p span{
+  padding: 0;
+}
+.earlySetAccount ul li:first-child p i{
+  display: inline-block;
+  float: right;
+  width: 0.26rem;
+  height: 0.16rem;
+  transform: rotate(-90deg);
+  background: url(../images/arrow02.png) no-repeat center center;
+  background-size: cover;
+  margin-top: 0.28rem;
+}
+.earlySetBtn{
+  height: 0.86rem;
+  padding: 13% 10%;
+}
+.earlySetBtn input{
+  width: 35%;
+  height: 0.86rem;
+  color: #fff;
+  text-align: center;
+  line-height: 0.86rem;
+  background: #169fff;
+  float: left;
+  border-radius: 6px;
+  font-size: 0.31rem;
+}
+.earlySetBtn input:last-child{
+  float: right;
+}
+
+.overdueSetInfo h3 span{
+  color: #666666;
+  font-size: 0.25rem;
+}
+.earlySetAccount ul li p input{
+  padding-left: 5%;
+}
+
+
+/*****************************xd-selectBankCard.html**/
+.cardInfo{
+  background: #fff;
+  padding: 0 5%;
+}
+.cardInfo li{
+  color: #444444;
+  height: 0.75rem;
+  border-bottom: 0.03rem solid #dcdcdc;
+  font-size: 0.28rem;
+  padding: 0.15rem 0;
+  position: relative;
+}
+.cardInfo li:last-child{
+  border: 0;
+}
+.cardInfo li .cardInfoLiMASK{
+  width:100%;
+  height:0.75rem;
+  position:absolute;
+}
+.cardInfo li img{
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: 0 0.15rem;
+}
+.cardInfo li p{
+  display: inline-block;
+  width: 65%;
+  border-right: 0.03rem solid #dcdcdc;
+}
+.cardInfo li p span,
+.cardInfo li p i{
+  display: block;
+}
+.cardInfo li p i{
+  font-size: 0.26rem;
+}
+.cardInfo li .selectBox{
+  display: inline-block;
+  float: right;
+  width: 15%;
+  height: 0.75rem;
+  padding: 0.2rem 0 0;
+}
+.cardInfo li .selectBox span{
+  margin: 0 auto;
+  display: block;
+  width: 0.24rem;
+  height: 0.24rem;
+  border: 0.02rem solid #666666;
+  text-align: center;
+  line-height: 0.24rem;
+  font-size: 0.23rem;
+}
+.cardInfo li .selectBox i{
+  display: block;
+  font-size: 0.22rem;
+  text-align: center;
+}
+.addCard{
+  display: block;
+  width: 80%;
+  height: 0.86rem;
+  color: #fff;
+  text-align: center;
+  line-height: 0.86rem;
+  background: #169fff;
+  border-radius: 6px;
+  font-size: 0.31rem;
+  margin: 0.62rem auto;
+}
+.addCardInfo{
+  margin: 0.25rem auto;
+  padding: 0 5%;
+  background: #fff;
+}
+.addCardInfo li{
+  height: 0.8rem;
+  line-height: 0.8rem;
+  color: #2f2f2f;
+  font-size: 0.27rem;
+  border-bottom: 0.03rem solid #dcdcdc;
+}
+.addCardInfo li:last-child{
+  border: 0;
+}
+.addCardInfo li i{
+  padding-left: 5%;
+}
+.addCardInfo li input{
+  padding-left: 5%;
+}
+.addCardInfo li:nth-child(2) em{
+  display: inline-block;
+  float: right;
+  width: 0.26rem;
+  height: 0.16rem;
+  background: url(../images/arrow02.png) no-repeat center center;
+  background-size: cover;
+  margin-top: 0.28rem;
+}
+
+.ViewBankList{
+  width: 39%;
+  margin: 0.62rem auto 0.3rem;
+  font-size: 0.26rem;
+  color: #169fff;
+}
+.ViewBankList span{
+  float: right;
+  margin-top: 0.08rem;
+  width: 0.24rem;
+  height: 0.21rem;
+  background: url(../images/arrow.png) no-repeat right bottom;
+  background-size: 0.24rem;
+}
+
+.xd-bankList{
+  width: 80%;
+  margin: 0 auto 0.3rem;
+  padding: 0 3%;
+  background: #fff;
+  border-radius:11px;
+}
+.xd-bankList li{
+  height: 1rem;
+  padding: 0 0 0 3%;
+  border-bottom: 0.03rem solid #dcdcdc;
+}
+.xd-bankList li:last-child{
+  border: 0;
+}
+.xd-bankList li img{
+  width: 0.62rem;
+  height: 0.62rem;
+  margin: 0.19rem 0.22rem 0;
+}
+.xd-bankList li p{
+  width: 77%;
+  display: inline-block;
+}
+.xd-bankList li p span{
+  display: block;
+  color: #444;
+  font-size: 0.28rem;
+}
+.xd-bankList li p i{
+  display: block;
+  color: #9a9a9a;
+  font-size: 0.2rem;
+}
+
+.selectBankCard{
+  width: 100%;
+}
+.addBankCard{
+  width: 100%;
+}
+
+
+
+
+
+
+/**/
+.xd-MASK {
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: #6d6d6d;
+  opacity: 0.8;
+}
+.xd-LAYOUT {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 70%;
+  height: 50%;
+  overflow: scroll;
+  z-index: 100;
+  opacity: 1;
+  background-color: #ffffff;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  -o-border-radius: 0.1rem;
+  border-radius: 0.1rem;
+}
+.xd-LAYOUT h3{
+  font-size: 0.32rem;
+  text-align: center;
+  line-height: 0.96rem;
+  color: #444444;
+  border-bottom: 0.03rem solid #dcdcdc;
+}
+.xd-LAYOUT ul{
+}
+.xd-LAYOUT ul li{
+  height: 1rem;
+  padding: 0 3%;
+  border-bottom: 0.03rem solid #dcdcdc;
+  position: relative;
+}
+.xd-LAYOUT ul li:last-child{
+  border: 0;
+}
+.xd-LAYOUT ul li img{
+  width: 0.62rem;
+  height: 0.62rem;
+  margin: 0.19rem 0.15rem 0 0;
+}
+.xd-LAYOUT ul li p{
+  width: 73%;
+  display: inline-block;
+}
+.xd-LAYOUT ul li p span{
+  display: block;
+  color: #444;
+  font-size: 0.28rem;
+}
+.xd-LAYOUT ul li p i{
+  display: block;
+  color: #9a9a9a;
+  font-size: 0.2rem;
+}
+.xd-LAYOUT ul li em{
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  border: 1px solid #9a9a9a;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 0.35rem;
+  text-align: center;
+  line-height: 0.3rem;
+}
+.xd-LAYOUT ul li.active em{
+  width: 0.33rem;
+  height: 0.33rem;
+  border: 0;
+  background: url(../images/circle.png) no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.xd-LAYOUT .xd-LAYOUTSub{
+  height: 0.75rem;
+  border-top: 0.03rem solid #dcdcdc;
+}
+.xd-LAYOUT .xd-LAYOUTSub input {
+  font-size: 0.3rem;
+  color: #169fff;
+  text-align: center;
+  line-height: 0.75rem;
+  float: left;
+  width: 49%;
+}
+.xd-LAYOUT .xd-LAYOUTSub input.xd-LAYOUTSubNo{
+  border-radius: 0;
+  border-right: 0.03rem solid #dcdcdc;
+  width: 49.5%;
+}
+.xd-LAYOUT p.content{
+  color: #444444;
+  padding: 0.35rem 10% 0.15rem;
+  font-size: 0.27rem;
+  text-align: center;
+  line-height: 0.36rem;
+  height: 1.06rem;
+}
+.xd-LAYOUT p.content2{
+  height: 0.71rem;
+}
+
+.xd-mask{
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 49;
+  background-color: #eaeaea;
+}
+
+
+
+
+
+
+
+/**/

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <title>首页</title>
+
+    <link rel="stylesheet" href="/build/prd/styles/app.css">
+
+</head>
+<body class="grayBG" ng-app="indexInfo">
+
+
+<script src="/build/prd/scripts/lib/jquery-1.11.1.min.js"></script>
+<script src="/build/prd/scripts/lib/angular.min.js"></script>
+<script src="/build/prd/scripts/xd-index.app.js"></script>
+<script src="/build/prd/scripts/app.js"></script>
+
+<script>
+    // 展开明细
+    $('.indexViewDetail').on('click', function () {
+        if (!$(".indexDetail").is(":hidden")) {
+            $('.indexDetail').slideUp(800);
+            $('.indexViewDetail').html('查看还款明细<span></span>');
+            $('.indexViewDetail span').css({
+                'transform': 'rotate(0deg)',
+                'transform-origin': '50% 50%'
+            });
+        } else {
+            $('.indexDetail').slideDown(800);
+            $('.indexViewDetail').html('收起还款明细<span></span>');
+            $('.indexViewDetail span').css({
+                'transform': 'rotate(180deg)',
+                'transform-origin': '50% 50%'
+            });
+        }
+    })
+
+    //查看明细详情
+    // $('.indexDetail ul li').on('click',function(){
+    //   if(!$(this).find(".detail").is(":visible")){
+    //     $(this).find('.waitPayDetail').css({
+    //       'transform':'rotate(180deg)',
+    //       'transform-origin':'0.11rem 50%'
+    //     });
+    //     $(this).height('2.04rem');
+    //     var bgColor = $(this).css('background-color');
+    //     // $(this).append('<div class="detail"><span>本息：<i>3500.00</i></span><span>违约金：0.00</span><span>罚息：0.00</span></div>');
+    //     $(this).children('.detail').css('display','block');
+    //     $(this).find('.detail').css('border-bottom','1px dashed #e6e6e6');
+    //     $(this).find('.detail').css('background',bgColor);
+    //   }else{
+    //     $(this).find('.waitPayDetail').css({
+    //       'transform':'rotate(0deg)',
+    //       'transform-origin':'0.11rem 50%'
+    //     });
+    //     $(this).height('0.68rem');
+    //     $(this).children('.detail').css('display','none');
+    //     $(this).remove('.detail');
+    //   }
+    // })
+
+    // 切换明细
+    $('.indexDetailList h3.rePayM').on('click', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.rePayTitle').removeAttr('style')
+        $('.rePay').css('display', 'block');
+        $('.waitPayTitle').css('display', 'none');
+        $('.waitPay').css('display', 'none');
+    })
+    $('.indexDetailList h3.waitPayM').on('click', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.waitPayTitle').removeAttr('style')
+        $('.waitPay').css('display', 'block');
+        $('.rePayTitle').css('display', 'none');
+        $('.rePay').css('display', 'none');
+    })
+
+    $(".logout").click(function () {
+        localStorage.clear();
+        window.location.href = "xd-login.html";
+    })
+</script>
+</body>
+</html>

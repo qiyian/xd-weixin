@@ -1,0 +1,529 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?69135u');
+  src:  url('fonts/icomoon.eot?69135u#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?69135u') format('truetype'),
+    url('fonts/icomoon.woff?69135u') format('woff'),
+    url('fonts/icomoon.svg?69135u#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-rs-alreadycollection2 .path1:before {
+  content: "\e952";
+  color: rgb(153, 153, 153);
+}
+.icon-rs-alreadycollection2 .path2:before {
+  content: "\e957";
+  margin-left: -1em;
+  color: rgb(153, 153, 153);
+}
+.icon-rs-alreadycollection2 .path3:before {
+  content: "\e95a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-rs-alreadypassed .path1:before {
+  content: "\e95c";
+  color: rgb(250, 175, 0);
+}
+.icon-rs-alreadypassed .path2:before {
+  content: "\e95d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-rs-auditing:before {
+  content: "\e95e";
+}
+.icon-rs-normal:before {
+  content: "\e95f";
+}
+.icon-rs-normalsettlement:before {
+  content: "\e960";
+}
+.icon-rs-overdue:before {
+  content: "\e961";
+}
+.icon-rs-pendingpayment2:before {
+  content: "\e963";
+}
+.icon-rs-refundsettlement:before {
+  content: "\e965";
+}
+.icon-rs-refused:before {
+  content: "\e966";
+}
+.icon-rs-return:before {
+  content: "\e967";
+}
+.icon-rs-stage1notrepayment:before {
+  content: "\e968";
+}
+.icon-rs-waiterefund2:before {
+  content: "\e969";
+}
+.icon-rs-aboutus:before {
+  content: "\e96a";
+}
+.icon-rs-alreadycollection .path1:before {
+  content: "\e96c";
+  color: rgb(249, 78, 78);
+}
+.icon-rs-alreadycollection .path2:before {
+  content: "\e96d";
+  margin-left: -1em;
+  color: rgb(249, 78, 78);
+}
+.icon-rs-alreadycollection .path3:before {
+  content: "\e96e";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-rs-apartment:before {
+  content: "\e96f";
+}
+.icon-rs-customerservice:before {
+  content: "\e970";
+}
+.icon-rs-help:before {
+  content: "\e974";
+}
+.icon-rs-homepage:before {
+  content: "\e977";
+}
+.icon-rs-pact .path1:before {
+  content: "\e978";
+  color: rgb(128, 128, 128);
+}
+.icon-rs-pact .path2:before {
+  content: "\e979";
+  margin-left: -1em;
+  color: rgb(102, 102, 102);
+}
+.icon-rs-pact .path3:before {
+  content: "\e97a";
+  margin-left: -1em;
+  color: rgb(102, 102, 102);
+}
+.icon-rs-pact .path4:before {
+  content: "\e97b";
+  margin-left: -1em;
+  color: rgb(102, 102, 102);
+}
+.icon-rs-pact .path5:before {
+  content: "\e97c";
+  margin-left: -1em;
+  color: rgb(102, 102, 102);
+}
+.icon-rs-pact .path6:before {
+  content: "\e97d";
+  margin-left: -1em;
+  color: rgb(102, 102, 102);
+}
+.icon-rs-pendingpayment:before {
+  content: "\e97e";
+}
+.icon-rs-refunded:before {
+  content: "\e97f";
+}
+.icon-rs-resetpassword .path1:before {
+  content: "\e980";
+  color: rgb(249, 78, 78);
+}
+.icon-rs-resetpassword .path2:before {
+  content: "\e981";
+  margin-left: -1em;
+  color: rgb(249, 78, 78);
+}
+.icon-rs-resetpassword .path3:before {
+  content: "\e982";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-rs-settlementaccount:before {
+  content: "\e983";
+}
+.icon-rs-thehousing:before {
+  content: "\e984";
+}
+.icon-rs-waiterefund:before {
+  content: "\e985";
+}
+.icon-bed3:before {
+  content: "\e94d";
+}
+.icon-psfindapartment:before {
+  content: "\e943";
+}
+.icon-arrow:before {
+  content: "\e930";
+}
+.icon-commit:before {
+  content: "\e931";
+}
+.icon-costlyfurniture:before {
+  content: "\e932";
+}
+.icon-design:before {
+  content: "\e933";
+}
+.icon-file:before {
+  content: "\e934";
+}
+.icon-greendecorate:before {
+  content: "\e935";
+}
+.icon-insurance:before {
+  content: "\e936";
+}
+.icon-regularlyclean:before {
+  content: "\e937";
+}
+.icon-renthouse:before {
+  content: "\e938";
+}
+.icon-renthouse2:before {
+  content: "\e939";
+}
+.icon-renthouse3:before {
+  content: "\e93c";
+}
+.icon-repair:before {
+  content: "\e93d";
+}
+.icon-review:before {
+  content: "\e93e";
+}
+.icon-saveworrymoney:before {
+  content: "\e940";
+}
+.icon-wifi:before {
+  content: "\e941";
+}
+.icon-airconditioning2:before {
+  content: "\e92f";
+}
+.icon-atm:before {
+  content: "\e92a";
+}
+.icon-airconditioning:before {
+  content: "\e916";
+}
+.icon-bed2:before {
+  content: "\e917";
+}
+.icon-brandapartment:before {
+  content: "\e918";
+}
+.icon-cleaner:before {
+  content: "\e919";
+}
+.icon-closeservice:before {
+  content: "\e91a";
+}
+.icon-desk2:before {
+  content: "\e91b";
+}
+.icon-electromagneticoven:before {
+  content: "\e91c";
+}
+.icon-furniture:before {
+  content: "\e91d";
+}
+.icon-gas2:before {
+  content: "\e91e";
+}
+.icon-home:before {
+  content: "\e91f";
+}
+.icon-homewifi:before {
+  content: "\e920";
+}
+.icon-leaf:before {
+  content: "\e921";
+}
+.icon-lock:before {
+  content: "\e922";
+}
+.icon-microwareoven:before {
+  content: "\e923";
+}
+.icon-repairservice:before {
+  content: "\e924";
+}
+.icon-savemoney:before {
+  content: "\e925";
+}
+.icon-servicepromise:before {
+  content: "\e926";
+}
+.icon-wardrobe2:before {
+  content: "\e927";
+}
+.icon-waterheater2:before {
+  content: "\e928";
+}
+.icon-wifi22:before {
+  content: "\e929";
+}
+.icon-bed:before {
+  content: "\e900";
+}
+.icon-clean:before {
+  content: "\e901";
+}
+.icon-cupboard:before {
+  content: "\e902";
+}
+.icon-customservice:before {
+  content: "\e903";
+}
+.icon-desk:before {
+  content: "\e904";
+}
+.icon-diningtable:before {
+  content: "\e905";
+}
+.icon-express:before {
+  content: "\e906";
+}
+.icon-gas:before {
+  content: "\e907";
+}
+.icon-gym:before {
+  content: "\e908";
+}
+.icon-heating:before {
+  content: "\e909";
+}
+.icon-inductioncooker:before {
+  content: "\e90a";
+}
+.icon-intelligentlock:before {
+  content: "\e90b";
+}
+.icon-microwaveoven:before {
+  content: "\e90c";
+}
+.icon-rangehood:before {
+  content: "\e90d";
+}
+.icon-refrigerator:before {
+  content: "\e90e";
+}
+.icon-sofa:before {
+  content: "\e90f";
+}
+.icon-supermarket:before {
+  content: "\e910";
+}
+.icon-tv:before {
+  content: "\e911";
+}
+.icon-wardrobe:before {
+  content: "\e912";
+}
+.icon-washingmachine:before {
+  content: "\e913";
+}
+.icon-waterheater:before {
+  content: "\e914";
+}
+.icon-wifi2:before {
+  content: "\e915";
+}
+.icon-music:before {
+  content: "\e92b";
+}
+.icon-mic:before {
+  content: "\e92c";
+}
+.icon-book:before {
+  content: "\e92d";
+}
+.icon-books:before {
+  content: "\e92e";
+}
+.icon-cart:before {
+  content: "\e93a";
+}
+.icon-coin-dollar:before {
+  content: "\e93b";
+}
+.icon-credit-card:before {
+  content: "\e93f";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-location:before {
+  content: "\e947";
+}
+.icon-location2:before {
+  content: "\e948";
+}
+.icon-compass:before {
+  content: "\e949";
+}
+.icon-map:before {
+  content: "\e94b";
+}
+.icon-map2:before {
+  content: "\e94c";
+}
+.icon-clock2:before {
+  content: "\e94f";
+}
+.icon-alarm:before {
+  content: "\e950";
+}
+.icon-bell:before {
+  content: "\e951";
+}
+.icon-calendar:before {
+  content: "\e953";
+}
+.icon-printer:before {
+  content: "\e954";
+}
+.icon-keyboard:before {
+  content: "\e955";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-mobile:before {
+  content: "\e958";
+}
+.icon-mobile2:before {
+  content: "\e959";
+}
+.icon-tv2:before {
+  content: "\e95b";
+}
+.icon-floppy-disk:before {
+  content: "\e962";
+}
+.icon-database:before {
+  content: "\e964";
+}
+.icon-bubble:before {
+  content: "\e96b";
+}
+.icon-user-tie:before {
+  content: "\e976";
+}
+.icon-key:before {
+  content: "\e98d";
+}
+.icon-key2:before {
+  content: "\e98e";
+}
+.icon-lock2:before {
+  content: "\e98f";
+}
+.icon-unlocked:before {
+  content: "\e990";
+}
+.icon-aid-kit:before {
+  content: "\e998";
+}
+.icon-gift:before {
+  content: "\e99f";
+}
+.icon-mug:before {
+  content: "\e9a2";
+}
+.icon-spoon-knife:before {
+  content: "\e9a3";
+}
+.icon-truck:before {
+  content: "\e9b0";
+}
+.icon-man:before {
+  content: "\e9dc";
+}
+.icon-woman:before {
+  content: "\e9dd";
+}
+.icon-man-woman:before {
+  content: "\e9de";
+}
+.icon-enter:before {
+  content: "\ea13";
+}
+.icon-exit:before {
+  content: "\ea14";
+}
+.icon-dribbble:before {
+  content: "\eaa7";
+}
+.icon-home2:before {
+  content: "\e944";
+}
+.icon-office:before {
+  content: "\e946";
+}
+.icon-pencil:before {
+  content: "\e94a";
+}
+.icon-coin-yen:before {
+  content: "\e94e";
+}
+.icon-user:before {
+  content: "\e971";
+}
+.icon-users:before {
+  content: "\e972";
+}
+.icon-user-plus:before {
+  content: "\e973";
+}
+.icon-user-check:before {
+  content: "\e975";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-zoom-in:before {
+  content: "\e987";
+}
+.icon-notification:before {
+  content: "\ea08";
+}
+.icon-question:before {
+  content: "\ea09";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}
+.icon-minus:before {
+  content: "\ea0b";
+}
+.icon-blocked:before {
+  content: "\ea0e";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}

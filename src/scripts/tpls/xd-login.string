@@ -1,0 +1,35 @@
+<!--动画部分-->
+<div id="lodding_animate">
+ <ul>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+ </ul>
+</div>
+<h1 class="loginBanner">
+ <img src="/build/prd/images/login-banner.jpg" alt="">
+</h1>
+<form action="" class="loginForm">
+ <label>
+   <i class="icon-user"></i> &ensp;账号
+   <input type="text" onkeyup="clearBCNum(this)" maxlength="18" placeholder="请输入身份证号" id="idNum">
+ </label>
+ <label>
+   <i class="icon-lock"></i> &ensp;密码
+   <input type="password" placeholder="请输入密码" id="pwd">
+ </label>
+</form>
+<input class="loginBtn" type="button" value="登录" ng-click="loginSub()">
+<section class="loginAct">
+ <span><a href="xd-activate.html">激活账号</a></span>
+ <span><a href="xd-forgetPwd.html">忘记密码</a></span>
+</section>

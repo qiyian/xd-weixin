@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="overdue" ng-controller="settlement">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"/>
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="format-detection" content="telephone=no, email=no"/>
+  <title>{{pageTitle}}</title>
+
+  <link rel="stylesheet" href="/build/prd/styles/app.css">
+
+</head>
+<body class="grayBG">
+
+  <script src="/build/prd/scripts/lib/jquery-1.11.1.min.js"></script>
+  <script src="/build/prd/scripts/lib/angular.min.js"></script>
+  <script src="/build/prd/scripts/xd-settlement.app.js"></script>
+  <script src="/build/prd/scripts/app.js"></script>
+
+  <script>
+
+    // 确定
+    $('.selectYes').on('click',function(){
+      $('.bankCardNum').val($('.alreadySel').parents('.selectBox').prev('p').find('.cardNum').html());
+      $('.BCName').html($('.alreadySel').parents('.selectBox').prev('p').find('.bankCardName').html());
+      $('.perLimit').removeClass('hide');
+      $('.perApply').html($('.alreadySel').parents('.selectBox').prev('p').find('.perApplyLimit').html());
+      $('.perDay').html($('.alreadySel').parents('.selectBox').prev('p').find('.perDayLimit').html());
+      $('.xd-mask').addClass('hide');
+      $('.selectBankCard').addClass('hide');
+    })
+
+    // 添加银行卡
+    $('.addYes').on('click',function(){
+      $('.selectBankCard').addClass('hide');
+      $('.xd-mask').removeClass('hide');
+      $('.addBankCard').removeClass('hide');
+      $('.custName').html(localStorage.getItem('xdCustName'));
+      $('.backCardNo').val("");
+      $('.addBankCard').css({
+        'position': 'absolute',
+        'top': '0',
+        'left': '0',
+        'zIndex': '51',
+      });
+    })
+
+    // 银行卡列表明细
+    $('.ViewBankList').on('click',function(){
+      if(!$(".xd-bankList").is(":hidden")){
+        $('.xd-bankList').slideUp(800);
+        $('.ViewBankList').html('查看支持银行列表<span></span>');
+        $('.ViewBankList span').css({
+          'transform':'rotate(0deg)',
+          'transform-origin':'50% 50%'
+        });
+      }else{
+        $('.xd-bankList').slideDown(800);
+        $('.ViewBankList').html('收起支持银行列表<span></span>');
+        $('.ViewBankList span').css({
+          'transform':'rotate(180deg)',
+          'transform-origin':'50% 50%'
+        });
+      }
+    })
+
+    // 取消还款、
+    $('.repayNo').on('click',function(){
+      window.location.href = "xd-index.html";
+    })
+
+
+    $(document).ready(function () {
+
+            $('#money').bind('input propertychange', function () {
+
+                var v = amount($(this).val());
+                $(this).val(v);
+                calculateExpect($(this).val(), curDetails.borrow_apr_rewrite, curDetails.borrow_period);
+            });
+        });
+
+
+function amount(v) {
+            var regStrs = [
+                ['^0(\\d+)$', '$1'], //禁止录入整数部分两位以上，但首位为0
+                ['[^\\d\\.]+$', ''], //禁止录入任何非数字和点
+                ['\\.(\\d?)\\.+', '.$1'], //禁止录入两个以上的点
+                ['^(\\d+\\.\\d{2}).+', '$1'] //禁止录入小数点后两位以上
+            ];
+            for (i = 0; i < regStrs.length; i++) {
+                var reg = new RegExp(regStrs[i][0]);
+                v = v.replace(reg, regStrs[i][1]);
+            }
+            return v;
+        }
+
+
+    $('.toSelectBC').on('click',function(){
+      var xdVersion = "1.0";
+      var xdAccessKey = localStorage.getItem('xdAccessKey');
+      var cardNo = $('.cardNum');
+      if(cardNo.length != 0){
+        var cardNoArr = [];
+        for(var i = 0;i<cardNo.length;i++){
+          // cardNoArr[i] = cardNo.eq(i).html();
+          cardNoArr.push(cardNo.eq(i).html());
+        }
+        // console.log(cardNoArr);
+        var defer = $.Deferred();
+        //这一步必须要写，要不然下面的then无法使用
+        defer.resolve($(".selectBankCard").append());
+
+        $.each(cardNoArr,function(i,e){
+          defer = defer.then(function () {
+            return $.ajax({
+            url: 'http://192.168.1.50:8080/credit-wx/restapi/payment/bankinfo/cardno/query',
+            // url: xdDomain + '/payment/bankinfo/cardno/query',
+            method:'post',
+            data:{
+              api_version: xdVersion,
+              access_key: xdAccessKey,
+              cardNo: e
+            },
+            success:function(res){
+                var bankInfo = JSON.parse(res).data.bankInfo;
+                for(var i = 0;i<cardNo.length;i++){
+                  if(cardNo.eq(i).html() == e){
+                    cardNo.eq(i).siblings('.bankCardName').html(bankInfo.bankName);
+                    cardNo.eq(i).siblings('.perApplyLimit').html(bankInfo.perApplyLimit);
+                    cardNo.eq(i).siblings('.perDayLimit').html(bankInfo.perDayLimit);
+                  };
+                }
+                $('.xd-mask').removeClass('hide');
+                $('.selectBankCard').removeClass('hide');
+                $('.selectBankCard').css({
+                  'position': 'absolute',
+                  'top': '0',
+                  'left': '0',
+                  'zIndex': '50',
+                });
+                $('.addNo').on('click',function(){
+                  $('.addBankCard').addClass('hide');
+                  $('.selectBankCard').removeClass('hide');
+                  $('.selectBankCard').css({
+                    'position': 'absolute',
+                    'top': '0',
+                    'left': '0',
+                    'zIndex': '50',
+                  });
+                })
+              }
+            })
+          })
+        })
+        defer.done(function(){
+          $(".selectBankCard").append();
+        });
+      }
+      else {
+        $('.selectBankCard').addClass('hide');
+        $('.xd-mask').removeClass('hide');
+        $('.addBankCard').removeClass('hide');
+        $('.custName').html(localStorage.getItem('xdCustName'));
+        $('.backCardNo').val("");
+        $('.addBankCard').css({
+          'position': 'absolute',
+          'top': '0',
+          'left': '0',
+          'zIndex': '51',
+        });
+        $('.addNo').on('click',function(){
+          $('.addBankCard').addClass('hide');
+          $('.xd-mask').addClass('hide');
+        })
+      }
+    })
+  </script>
+</body>
+</html>

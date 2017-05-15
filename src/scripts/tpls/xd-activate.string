@@ -1,0 +1,43 @@
+<!--动画部分-->
+<div id="lodding_animate">
+ <ul>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+ </ul>
+</div>
+<form action="" class="activateForm">
+ <label>
+   &ensp; 账号
+   <input id="loginName" oninput="clearIDNum(this)" maxlength="18" type="text" placeholder="请输入身份证号">
+ </label>
+ <label>
+   &ensp; 手机号
+   <input id="mobile" oninput="clearBCNum(this)" maxlength="11" type="text" placeholder="请输入预留手机号">
+ </label>
+ <label>
+   &ensp; 验证码
+   <input id="checkCode" type="text" placeholder="请输入验证码">
+   <input class="getCheckCode" type="button" value="获取验证码" ng-click="getCheckCode()">
+ </label>
+</form>
+<form action="" class="loginForm activateFormPwd">
+ <label>
+   &ensp; 设置密码
+   <input id="password" type="password" placeholder="6到16位数字或字母">
+ </label>
+ <label>
+   &ensp; 重复密码
+   <input id="rePwd" type="password" placeholder="6到16位数字或字母">
+ </label>
+</form>
+<input class="loginBtn" type="button" value="激活" style="margin-top:0.59rem;" ng-click="activeSub()">
